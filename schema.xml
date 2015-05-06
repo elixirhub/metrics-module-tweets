@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components_metrics>
+	<component>
+	 <name>metric-module-tweets</name>
+	 <description>Topic spread</description>
+	 <authors>Artaza Haydee, Manuel Corpas, Rafael Jimenez</authors>
+	 <input>Uniprot</input>
+	 <output>list</output>
+	 <dependences>
+		<library>oauth</library> 
+	 </dependences>
+	 <frequency>monthly</frequency>
+	 <resource>
+		<rsc>database</rsc>
+		<rsc>software</rsc>
+	</resource>
+	  <repository>https://github.com/elixirhub/metrics-framework.git</repository>
+	</component>
+</components_metrics>

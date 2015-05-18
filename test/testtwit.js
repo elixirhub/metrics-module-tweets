@@ -6,7 +6,7 @@ var file_output = 'result_twitter.txt';
 var encoding = 'utf8';
 
 var done=false;
-var keyword = 'github';
+var keyword = process.argv[2]; //'github'
 var timescan = 60;
 var countTweetsTotal = 0;
 

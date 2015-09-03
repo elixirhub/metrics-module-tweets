@@ -1,0 +1,18 @@
+{
+  "name": "metrics-module-tweets",
+  "version": "0.1.0",
+  "description": "This Social Network Metric defines the searching of specific Keyword into the Twitter Community to measure the spreading of this topic",
+  "author": "TGAC-EBI",
+  "contributors": [{"name": "Haydee Artaza, Rafael Girado","email": "haydee.artaza@tgac.ac.uk,rafael.jimenez@elixir-europe.org"}],
+  "keywords": [
+	  "metrics",
+	  "Social media"
+	],
+	"private": true,
+	"dependencies": {
+		"oauth": "latest"
+  },
+  "subdomain": "metrics",
+  "analyze": true,
+  "license": "TGAC"
+}

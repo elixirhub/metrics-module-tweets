@@ -5,11 +5,8 @@ var hits = new Hits(config);
 var file_output = 'result_twitter.txt';
 var encoding = 'utf8';
 
-var done=false;
 var keyword = process.argv[2]; //'github'
-var timescan = 60;
-var countTweetsTotal = 0;
-
+var timescan = 3500; //seconds
 
 
 console.log('Running twitter metric');

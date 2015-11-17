@@ -4,18 +4,17 @@
 	 <name>metrics-module-tweets</name>
 	 <description>Topic spread</description>
 	 <authors>Artaza Haydee, Manuel Corpas, Rafael Jimenez</authors>
-	<input>
+	 <input>
       <parameter>github</parameter>
-     </input>
+    </input>
 	 <output>list</output>
 	 <dependencies>
 		<library>oauth</library> 
 	 </dependencies>
 	 <frequency>monthly</frequency>
 	 <resources>
-		<rsc>database</rsc>
 		<rsc>software</rsc>
-	</resources>
-	  <repository>https://github.com/elixirhub/metrics-module-tweets.git</repository>
+	 </resources>
+	 <repository>https://github.com/elixirhub/metrics-module-tweets.git</repository>
 	</component>
 </components_metrics>

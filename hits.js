@@ -36,24 +36,24 @@ Hits.prototype.getHits = function (params,timescan,callback) {
   var start = datestring ();
   this.params = { track: params};
   var stream = this.twit.stream('statuses/filter', this.params);
-  
+  var ntweets = 0;
   stream.on('tweet', function (tweet) {
   	var end = datestring();
-  	//console.log(tweet);
   	if( doneTimescan(start, end, timescan) ) {
   		stream.stop();
-  		return callback(sumarizedata(lang));
+  		//return callback(sumarizedata(lang)); //this option can be used to return language classification
+		return callback(ntweets + ' tweets');
   	}else{
+	  ntweets +=1;
 	  if (! lang.hasOwnProperty(tweet.lang)) lang[tweet.lang] = 1;
 	  else lang[tweet.lang] += 1;
 	}
   });
+ stream.on('error', function(error) {
+    console.log(error);
+  });
 };
 
-
-Hits.prototype.get = function (path, params, callback){
-	this.twit.get(path, params, callback);
-};
 
 function sumarizedata(data){
   	var results = '';

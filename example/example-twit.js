@@ -5,21 +5,13 @@ var hits = new Hits(config);
 var file_output = 'result_twitter.txt';
 var encoding = 'utf8';
 
-var keyword = process.argv[2]; //'github'
-var timescan = 3500; //seconds
+var keyword = process.argv[2]; //'swissprot,swiss prot,swiss-prot,UniProtKB,uniprot' 
+var timescan = 1800; //seconds
 
 
 console.log('Running twitter metric');
 
 hits.getHits(keyword, timescan, function (results){
 	console.log(results);
-	fs.writeFile(file_output , results, encoding, function (err) {
-			if (err) return console.log(err);
-			else {console.log('data save into > ' + file_output);}
-	});	
-		
 });
-
-
-
 
